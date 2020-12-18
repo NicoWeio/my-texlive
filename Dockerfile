@@ -12,6 +12,7 @@ RUN apt-get update && apt-get install -y \
 RUN pip3 install \
      matplotlib \
      numpy \
+     pint \
      scipy \
      uncertainties
 
