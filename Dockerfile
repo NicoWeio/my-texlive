@@ -16,7 +16,8 @@ RUN pip3 install \
      scipy \
      uncertainties
 
-ENV LANG=C.UTF-8
+ENV LANG=C.UTF-8 \
+	SOURCE_DATE_EPOCH=0
 
 ADD entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
