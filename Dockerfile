@@ -1,5 +1,8 @@
 FROM thomasweise/docker-texlive-full
 
+# https://github.com/debuerreotype/docker-debian-artifacts/issues/66#issuecomment-476616579
+RUN sed -i '/jessie-updates/d' /etc/apt/sources.list  # Now archived
+
 RUN apt-get update && apt-get install -y \
     biber \
     dvipng \
